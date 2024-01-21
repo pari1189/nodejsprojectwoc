@@ -4,37 +4,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="homepage.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    
-    <div class="container">
+
+
+    <!-- Homepage -->
+    <div class="container" id="div1">
         <h1 id="heading">The Pictionary Game</h1>
-        <div class="box one">
+        <div class="box first">
             <h3>Create Room</h3><br>
             <h5>Username:</h5>
             <input type="text" alt="Enter Your Username"><br><br>
-            <a href="./secondpage.html"><button id="createroom">Create Room</button></a>
+            <a href="./secondpage.html"><button id="createroom" onclick="toggle()">Create Room</button></a>
         </div>
         
-        <div class="box two">
+        <div class="box second">
             <h5>Username:</h5>
             <input type="text" alt="Enter Your Username"><br><br>
             <h5>Room Id:</h5>
             <input type="text" alt="Room Id"><br><br>
-            <a href="./secondpage.html"><button id="joinroom">Join Room</button></a>
+            <a href="./secondpage.html"><button id="joinroom" onclick="toggle()" >Join Room</button></a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Second Page -->
+    <div class="title" id="div2">
+        <div class="main one"></div>
+        <div class="main two"></div>
+        <div class="main three"></div>
+        <div class="main four"></div>
+
+        <div class="main five">
+            <div class="appchat">
+                <div class="screen join-screen-active">
+                    <div></div>
+                </div>
+                <div class="screen chat-screen"></div>
+            </div>
         </div>
 
-        <!-- <div id="board">
-            <div class="box" id="0"></div>
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
-        </div> -->
+        <div class="main six">
+            <div class="chatbox">
+                <ul class="messages" id="messages"></ul>
+                <form class="form" id="form" action="">
+                    <input id="m" autocomplete="off" /><button>Send</button>
+                </form>
+            </div>
+        </div>
     </div>
-</body>
+
+
+
+   
+    <script type="text/Javascript" src="socket.io/socket.io.js"></script>
+    <script text="text/Javascript" src="code.js"></script>
+
+
+
+    <!-- // // Javascript for hiding div with class=container
+    //     function toggle() {
+    //                 var div1 = document.getElementById('div1');
+    //                 var div2 = document.getElementById('div2');
+
+    //                 // Toggle visibility by toggling the "hidden" class
+    //                 if (div1.style.display !== 'none') {
+    //                     div1.style.display = 'none';
+    //                     div2.style.display = 'block';
+    //                 } else {
+    //                     div1.style.display = 'block';
+    //                     div2.style.display = 'none';
+    //                 }
+    //             } -->
+    </body>
 </html>

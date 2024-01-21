@@ -50,7 +50,7 @@ input{
     width: 450px;
 }
 
-.two{
+.second{
     margin: 40px;
 }
 
@@ -70,3 +70,112 @@ button {
       height: 75%;
     }
   }    
+
+
+
+
+.title > body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    height: 748px;
+    width: 748px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 70% 20%;
+    gap: 9px;
+    height: 100%;
+    width: 100%;
+    /* border: 10px solid black;  */
+}
+
+.main{
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+.one{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #439bce;
+}
+
+.two{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #439bce;
+}
+
+.three{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #439bce;
+}
+
+.four{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;   
+    background-color: white;
+}
+
+.five{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #439bce;
+}
+
+.six{
+    grid-row: span 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border: 5px solid black;
+    border-radius: 30px;
+    background-color: #439bce;
+}
+
+.messages{
+    justify-content: right;
+    margin-top: auto;
+}
+
+.form{
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+#m{
+    width: 200px;
+    border-radius: 15px;
+}
+
+.chatbox{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* const exp = require("constants");
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const server = require("http").createServer(app);
+
+app.use(express.static(path.join(__dirname + "/public")));
+
+server.listen(5000); */
